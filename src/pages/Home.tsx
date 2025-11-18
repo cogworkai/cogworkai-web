@@ -3,8 +3,19 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, Target, Zap, ArrowRight } from "lucide-react";
 import logo from "@/assets/cogwork-logo.png";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const benefits = [
     {
       icon: Brain,
@@ -33,11 +44,17 @@ const Home = () => {
         
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="mb-8 animate-scale-in">
+            <div 
+              className="mb-8 animate-scale-in"
+              style={{
+                transform: `translateY(${scrollY * 0.3}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               <img 
                 src={logo} 
                 alt="CogworkAI" 
-                className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)] animate-glow-pulse"
+                className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]"
               />
             </div>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight">
