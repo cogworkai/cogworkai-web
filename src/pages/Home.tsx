@@ -25,26 +25,26 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-40 pb-32 px-4 overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-dark opacity-50" />
         <div className="absolute top-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-glow-pulse" />
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-glow-pulse" />
         
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <div className="max-w-5xl mx-auto text-center animate-fade-in">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight">
               Elevate Your AI Game
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
               Stop being overwhelmed by AI hype. Get expert advisory that connects your business needs with the right AI technologies—on budget, on target.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="shadow-glow text-lg">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" asChild className="shadow-glow text-xl px-10 py-7">
                 <Link to="/contact">
-                  Start Your AI Roadmap <ArrowRight className="ml-2" size={20} />
+                  Start Your AI Roadmap <ArrowRight className="ml-2" size={24} />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg border-primary/50 hover:border-primary">
+              <Button size="lg" variant="outline" asChild className="text-xl px-10 py-7 border-primary/50 hover:border-primary">
                 <Link to="/services">
                   Explore Services
                 </Link>
