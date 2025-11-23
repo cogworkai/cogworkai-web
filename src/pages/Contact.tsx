@@ -53,7 +53,7 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             {/* Contact Form */}
             <Card className="p-8 bg-card border-border animate-fade-in">
               <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
@@ -124,55 +124,6 @@ const Contact = () => {
                 </Button>
               </form>
             </Card>
-
-            {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div>
-                <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
-                <p className="text-muted-foreground mb-8">
-                  Reach out to our team directly or fill out the form. We're here to answer your questions and discuss your AI strategy.
-                </p>
-              </div>
-
-              <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@cogworkai.com</p>
-                    <p className="text-muted-foreground">support@cogworkai.com</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground mt-1">Mon-Fri, 9am-6pm EST</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Office</h3>
-                    <p className="text-muted-foreground">123 AI Boulevard</p>
-                    <p className="text-muted-foreground">Tech City, TC 12345</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
