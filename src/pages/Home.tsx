@@ -4,38 +4,29 @@ import { Card } from "@/components/ui/card";
 import { Brain, Target, Zap, ArrowRight } from "lucide-react";
 import logo from "@/assets/cogwork-logo.png";
 import { useState, useEffect } from "react";
-
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const benefits = [
-    {
-      icon: Brain,
-      title: "Expert AI Guidance",
-      description: "Navigate the complex AI landscape with confidence. We cut through the noise to deliver solutions that work.",
-    },
-    {
-      icon: Target,
-      title: "Perfect Match",
-      description: "Connect your specific business needs with the right AI technologies, tailored to your budget and goals.",
-    },
-    {
-      icon: Zap,
-      title: "Rapid Results",
-      description: "Stop wasting time on trial and error. Get actionable roadmaps and implementation strategies fast.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const benefits = [{
+    icon: Brain,
+    title: "Expert AI Guidance",
+    description: "Navigate the complex AI landscape with confidence. We cut through the noise to deliver solutions that work."
+  }, {
+    icon: Target,
+    title: "Perfect Match",
+    description: "Connect your specific business needs with the right AI technologies, tailored to your budget and goals."
+  }, {
+    icon: Zap,
+    title: "Rapid Results",
+    description: "Stop wasting time on trial and error. Get actionable roadmaps and implementation strategies fast."
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-4 overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-dark opacity-50" />
@@ -44,25 +35,16 @@ const Home = () => {
         
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div 
-              className="mb-8 animate-scale-in"
-              style={{
-                transform: `translateY(${scrollY * 0.3}px)`,
-                transition: 'transform 0.1s ease-out'
-              }}
-            >
-              <img 
-                src={logo} 
-                alt="CogworkAI" 
-                className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]"
-              />
+            <div className="mb-8 animate-scale-in" style={{
+            transform: `translateY(${scrollY * 0.3}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}>
+              <img src={logo} alt="CogworkAI" className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]" />
             </div>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight md:text-7xl">
               Elevate Your AI Game
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">
-              Stop being overwhelmed by AI hype. Get expert advisory that connects your business needs with the right AI technologies—on budget, on target.
-            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">Get expert advice connecting your business with the right AI technologies—no hype, just results.                                       </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" asChild className="shadow-glow text-xl px-10 py-7">
                 <Link to="/contact">
@@ -86,17 +68,13 @@ const Home = () => {
             Why <span className="text-primary">CogworkAI</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card
-                key={index}
-                className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {benefits.map((benefit, index) => <Card key={index} className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated group animate-fade-in" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <benefit.icon className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -109,35 +87,27 @@ const Home = () => {
               Your Path to AI Excellence
             </h2>
             <div className="space-y-8">
-              {[
-                {
-                  step: "01",
-                  title: "Assessment",
-                  description: "We analyze your business needs, challenges, and objectives to understand where AI can create the most value.",
-                },
-                {
-                  step: "02",
-                  title: "Strategy",
-                  description: "Receive a custom AI roadmap with clear technology recommendations matched to your budget and timeline.",
-                },
-                {
-                  step: "03",
-                  title: "Implementation",
-                  description: "Get hands-on guidance as you deploy the right AI solutions, ensuring smooth integration and maximum ROI.",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex gap-6 items-start animate-fade-in"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
+              {[{
+              step: "01",
+              title: "Assessment",
+              description: "We analyze your business needs, challenges, and objectives to understand where AI can create the most value."
+            }, {
+              step: "02",
+              title: "Strategy",
+              description: "Receive a custom AI roadmap with clear technology recommendations matched to your budget and timeline."
+            }, {
+              step: "03",
+              title: "Implementation",
+              description: "Get hands-on guidance as you deploy the right AI solutions, ensuring smooth integration and maximum ROI."
+            }].map((item, index) => <div key={index} className="flex gap-6 items-start animate-fade-in" style={{
+              animationDelay: `${index * 0.2}s`
+            }}>
                   <div className="text-5xl font-bold text-primary/20">{item.step}</div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-muted-foreground">{item.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -162,8 +132,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
