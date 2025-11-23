@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/cogwork-logo.png";
+import logo from "@/assets/cogwork-logo-v3.png";
 
 const Footer = () => {
   return (
@@ -43,7 +43,7 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>info@cogworkai.com</li>
-              <li>+1 (555) 123-4567</li>
+              {/* <li>+1 (555) 123-4567</li> */}
             </ul>
           </div>
         </div>

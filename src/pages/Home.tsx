@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, Target, Zap, ArrowRight } from "lucide-react";
-import logo from "@/assets/cogwork-logo.png";
+import logo from "@/assets/cogwork-logo-v3.png";
 import { useState, useEffect } from "react";
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -39,12 +39,12 @@ const Home = () => {
             transform: `translateY(${scrollY * 0.3}px)`,
             transition: 'transform 0.1s ease-out'
           }}>
-              <img src={logo} alt="CogworkAI" className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]" />
+              <img src={logo} alt="CogworkAI" className="h-32 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]" />
             </div>
             <h1 className="text-6xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight md:text-7xl">
               Elevate Your AI Game
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">Get expert advice connecting your business with the right AI technologies — no hype, just results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-12 leading-relaxed font-medium">Get expert advice connecting your business with the right AI technologies — no hype, just results.</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" asChild className="shadow-glow text-xl px-10 py-7">
                 <Link to="/contact">

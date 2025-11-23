@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@/assets/cogwork-logo.png";
+import logo from "@/assets/cogwork-logo-v3.png";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
