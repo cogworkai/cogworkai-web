@@ -135,7 +135,7 @@ export default function MailBrief() {
             </div>
             <div>
               <p><Check size={18} aria-hidden="true" /> Summarize mail locally with Apple’s on-device language tools.</p>
-              <p><Check size={18} aria-hidden="true" /> Use your own API key for Gemini or a compatible cloud provider.</p>
+              <p><Check size={18} aria-hidden="true" /> Use your own key with a cloud AI configuration that permits private email processing without model training.</p>
               <p><Check size={18} aria-hidden="true" /> The push notification relay handles limited message metadata.</p>
             </div>
           </div>
@@ -153,13 +153,6 @@ export default function MailBrief() {
           </div>
         </section>
       </main>
-
-      <footer className="mb-footer">
-        <div className="mb-container mb-footer-inner">
-          <a href="/">cogworkAI</a>
-          <p>© {new Date().getFullYear()} cogworkAI</p>
-        </div>
-      </footer>
     </div>
   );
 }

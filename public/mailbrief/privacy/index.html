@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MailBrief Privacy Policy | cogworkAI</title>
+    <meta name="description" content="How MailBrief accesses, uses, shares, stores, and deletes Gmail and Google account data." />
+    <link rel="canonical" href="https://cogworkai.com/mailbrief/privacy/" />
+    <link rel="icon" href="/mail-brief/app-icon.webp" type="image/webp" />
+    <link rel="stylesheet" href="/mailbrief/legal.css" />
+  </head>
+  <body>
+    <header class="legal-header">
+      <nav class="legal-width" aria-label="MailBrief">
+        <a href="/mail-brief/" class="legal-brand"><img alt="" src="/mail-brief/app-icon.webp" width="36" height="36" /> MailBrief</a>
+        <a href="/mailbrief/terms-of-service/">Terms of Service</a>
+      </nav>
+    </header>
+    <main class="legal-width">
+      <h1>Privacy Policy</h1>
+      <p class="legal-date">Effective <time datetime="2026-11-15">November 15, 2026</time></p>
+      <p>cogworkAI provides MailBrief, a Gmail client for iPhone and iPad. This policy explains how we handle information when you connect Gmail, use MailBrief, or contact us for support. You can explore the sample mailbox in Demo Mode without connecting a Google Account.</p>
+
+      <h2>Google and Gmail data we access</h2>
+      <p>You sign in directly with Google. MailBrief receives the permissions you grant on Google’s authorization screen and the tokens needed to use them.</p>
+      <ul>
+        <li><strong>Google account information.</strong> We use your email address and basic Google profile information, such as your name and profile photo when available, to identify and display the connected account. OAuth access and refresh tokens let the app connect and maintain the session.</li>
+        <li><strong>Gmail read access (<code>gmail.readonly</code>).</strong> We read message IDs, headers, senders and recipients, subjects, snippets, bodies, labels, and mailbox change history as needed to show and sync your mailbox, group messages into Morning Briefs, summarize and classify messages, and extract order, delivery, and offer details for your own views.</li>
+        <li><strong>Gmail management access (<code>gmail.modify</code>).</strong> This permission lets MailBrief read mail and carry out the actions you initiate, such as composing and sending a message, marking it read or unread, starring, archiving, or moving it to Trash.</li>
+      </ul>
+
+      <h2>Who processes Gmail data</h2>
+      <ul>
+        <li><strong>On-device processing.</strong> MailBrief can summarize and classify email on your device. Summaries, classifications, briefing items, and extracted order and offer details are used to provide features in your account.</li>
+        <li><strong>Optional AI providers.</strong> When you configure cloud AI, MailBrief can send the selected service email context, such as sender, subject, snippet, and preprocessed body text, to summarize mail or build your brief. If you enable compatible remote classification, the service can receive similar context to categorize mail. Requests go to the endpoint you configure, such as Google’s Gemini API or an OpenAI-compatible endpoint, using your credentials. The provider processes that content under the terms and retention settings for your account. Use only a provider and configuration that allows private email processing without using Gmail data to train or improve generalized models or permitting routine human review. Gemini’s unpaid data-use terms may permit both. Choose on-device processing and turn off remote classification to avoid those transfers. <a href="https://aistudio.google.com/docs/terms">Gemini API data-use terms</a></li>
+        <li><strong>Push notifications.</strong> Google Cloud Pub/Sub sends mailbox-change events to our relay hosted on Cloudflare. The relay can use your encrypted refresh token to query Gmail for message IDs and limited details such as sender, subject, and snippet. It uses those details and your sender rules to route updates through Apple Push Notification service (APNs). Alert pushes can include message details, including the snippet, and Apple may display them on your device according to your notification and preview settings. Full email bodies stay out of the relay’s storage.</li>
+        <li><strong>Mail you send.</strong> Gmail sends your outgoing messages to the recipients you choose. If you email us for support, we use your address and the information you provide to respond.</li>
+      </ul>
+
+      <h2>Google Limited Use</h2>
+      <p>MailBrief’s use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> and the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace user data and developer policy</a>, including their Limited Use requirements. These protections also apply to information derived from Gmail data.</p>
+      <p>We use Gmail data to provide or improve the MailBrief features you can see and use. We prohibit selling Gmail data, sharing it with data brokers, using it for advertising or credit decisions, and using or transferring it to train or improve generalized AI models. We limit transfers to providing or improving a visible feature with your consent, addressing a security issue, complying with law, or completing a corporate transaction with your explicit prior consent.</p>
+      <p>People working for cogworkAI may read specific Gmail data only with your documented, affirmative permission for that data, when necessary for security or legal compliance, or when the data has been aggregated and anonymized for lawful internal operations.</p>
+
+      <h2>Storage, security, and retention</h2>
+      <p>The app stores Google credentials and AI keys in Apple Keychain. Mailbox data, queued actions, summaries, briefings, and extracted details can be cached in the app’s local files and database for syncing, offline access, and faster display. Some database records remain on the device after sign-out. Use the deletion steps below to remove the app’s local files.</p>
+      <p>The notification relay stores the Gmail address, device push token, push preferences, sender rules, sync checkpoint, and an encrypted Google refresh token for the registration. It keeps the registration until it is removed or pruned. The relay attempts to remove the registration when you sign out. Operational logs can contain account or message identifiers and error details used to diagnose delivery and sync. Google, Apple, and Cloudflare process data needed to deliver their respective parts of the service. MailBrief uses HTTPS for its connections to Gmail and the hosted relay.</p>
+
+      <h2>Choices and deletion</h2>
+      <ul>
+        <li><strong>Revoke access.</strong> In MailBrief, open Settings and select <strong>Sign Out of Gmail</strong>. To revoke MailBrief’s authorization with Google, remove MailBrief under <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future authorized Gmail requests and leaves your Gmail mailbox intact.</li>
+        <li><strong>Remove local data.</strong> In <strong>Settings → Storage &amp; Diagnostics</strong>, select <strong>Reset Cached Metadata</strong> to clear generated summaries, extracted offers, and order records. To remove underlying local mailbox files, sign out, then use <strong>Delete App</strong> in iOS or iPadOS. Offloading the app preserves its documents and data.</li>
+        <li><strong>Control processing.</strong> Choose the on-device engine and set remote classification to <strong>None</strong> in MailBrief settings. Manage notification previews in your device settings. For copies already held by an AI provider you configured, use that provider’s deletion controls or contact the provider.</li>
+        <li><strong>Ask us to delete data.</strong> Email <a href="mailto:info@cogworkai.com?subject=MailBrief%20privacy%20request">info@cogworkai.com</a> to request deletion of your MailBrief relay registration and related data we hold, or to ask about access or correction. We may verify that you control the associated email address. We delete data we control upon a verified request, subject to retention required by law.</li>
+      </ul>
+
+      <h2>Updates and contact</h2>
+      <p>We will update this page when our practices change. If we plan to use Google data for a new purpose, we will explain the change and obtain your consent before that use. Send privacy questions to <a href="mailto:info@cogworkai.com?subject=MailBrief%20privacy">info@cogworkai.com</a>.</p>
+    </main>
+    <footer class="legal-footer">
+      <div class="legal-width"><a href="/">cogworkAI</a></div>
+    </footer>
+  </body>
+</html>
