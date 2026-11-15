@@ -22,6 +22,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "MailBrief", path: "/mail-brief/", reloadDocument: true },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ];
@@ -37,11 +38,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
+                reloadDocument={link.reloadDocument}
                 className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {link.name}
@@ -55,7 +57,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="lg:hidden text-foreground hover:text-primary transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -63,11 +65,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
+          <div className="lg:hidden py-4 animate-fade-in">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
+                reloadDocument={link.reloadDocument}
                 onClick={() => setIsOpen(false)}
                 className="block py-3 text-foreground hover:text-primary transition-colors duration-200 font-medium"
               >

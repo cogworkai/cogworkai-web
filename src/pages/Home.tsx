@@ -57,6 +57,9 @@ const Home = () => {
                 </Link>
               </Button>
             </div>
+            <a href="/mail-brief/" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground underline decoration-primary/70 underline-offset-4 hover:text-primary">
+              Meet MailBrief <ArrowRight size={16} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>
