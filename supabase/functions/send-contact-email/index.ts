@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to the business
     const emailResponse = await resend.emails.send({
-      from: "CogworkAI Contact Form <onboarding@resend.dev>",
+      from: "cogworkAI Contact Form <onboarding@resend.dev>",
       to: ["info@cogworkai.com"], // Replace with your actual business email
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -46,7 +46,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Optionally send confirmation email to the user
     await resend.emails.send({
-      from: "CogworkAI <onboarding@resend.dev>",
+      from: "cogworkAI <onboarding@resend.dev>",
       to: [email],
       subject: "We received your message!",
       html: `
@@ -56,7 +56,7 @@ const handler = async (req: Request): Promise<Response> => {
         <blockquote style="border-left: 3px solid #d946ef; padding-left: 15px; color: #666;">
           ${message.replace(/\n/g, '<br>')}
         </blockquote>
-        <p>Best regards,<br>The CogworkAI Team</p>
+        <p>Best regards,<br>The cogworkAI Team</p>
       `,
     });
 

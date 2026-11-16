@@ -12,6 +12,10 @@ import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import MailBrief from "./pages/MailBrief";
+import MailBriefIndex from "./pages/MailBriefIndex";
+import MailBriefPrivacy from "./pages/MailBriefPrivacy";
+import MailBriefTOS from "./pages/MailBriefTOS";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +29,11 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/mail-brief" element={<MailBrief />} >
+            <Route index element={<MailBriefIndex />} />
+            <Route path="privacy-policy" element={<MailBriefPrivacy />} />
+            <Route path="terms-of-service" element={<MailBriefTOS />} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />

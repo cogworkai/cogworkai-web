@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <img src={logo} alt="CogworkAI" className="h-10 w-auto mb-4" />
+            <img src={logo} alt="cogworkAI" className="h-10 w-auto mb-4" />
             <p className="text-muted-foreground max-w-md">
               Expert AI advisory services helping small businesses navigate the AI ecosystem and connect with the right technologies for their needs.
             </p>
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CogworkAI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} cogworkAI. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -39,7 +39,7 @@ const Home = () => {
             transform: `translateY(${scrollY * 0.3}px)`,
             transition: 'transform 0.1s ease-out'
           }}>
-              <img src={logo} alt="CogworkAI" className="h-32 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]" />
+              <img src={logo} alt="cogworkAI" className="h-32 w-auto mx-auto drop-shadow-[0_0_30px_rgba(252,63,173,0.5)]" />
             </div>
             <h1 className="text-6xl lg:text-9xl font-bold mb-10 bg-gradient-primary bg-clip-text text-transparent leading-tight md:text-7xl">
               Elevate Your AI Game
@@ -68,7 +68,7 @@ const Home = () => {
       <section className="py-20 px-4 bg-card/50">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Why <span className="text-primary">CogworkAI</span>
+            Why <span className="text-primary">cogworkAI</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => <Card key={index} className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated group animate-fade-in" style={{

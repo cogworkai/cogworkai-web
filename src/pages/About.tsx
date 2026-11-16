@@ -50,7 +50,7 @@ const About = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About <span className="text-primary">CogworkAI</span>
+              About <span className="text-primary">cogworkAI</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               We're AI advisors who believe small businesses deserve expert guidance without the enterprise price tag. No fluff, no overselling—just clear paths to AI success.
