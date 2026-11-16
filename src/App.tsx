@@ -31,8 +31,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/mail-brief" element={<MailBrief />} >
             <Route index element={<MailBriefIndex />} />
-            <Route path="privacy-policy" element={<MailBriefPrivacy />} />
-            <Route path="terms-of-service" element={<MailBriefTOS />} />
+            <Route path="/mail-brief/privacy-policy" element={<MailBriefPrivacy />} />
+            <Route path="/mail-brief/terms-of-service" element={<MailBriefTOS />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
