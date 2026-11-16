@@ -58,6 +58,12 @@ export default function MailBrief() {
           <a href="/" className="mb-site-logo">
             <img src={logo} alt="cogworkAI home" width="1154" height="192" />
           </a>
+          <a className="mb-header-link" href="/#/mail-brief/privacy-policy">
+            Privacy Policy
+          </a>
+          <a className="mb-header-link" href="/#/mail-brief/terms-of-service">
+            Terms of Service
+          </a>
           <a className="mb-header-link" href={contact}>
             Contact <ArrowUpRight size={16} aria-hidden="true" />
           </a>
