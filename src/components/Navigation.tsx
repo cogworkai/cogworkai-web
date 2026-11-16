@@ -22,7 +22,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "MailBrief", path: "/mail-brief", reloadDocument: true },
+    { name: "MailBrief", path: "/mail-brief" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ];
